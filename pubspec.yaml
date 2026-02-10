@@ -1,0 +1,110 @@
+name: flutter_template
+description: "A new Flutter project."
+# The following line prevents the package from being accidentally published to
+# pub.dev using `flutter pub publish`. This is preferred for private packages.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+# The following defines the version and build number for your application.
+# A version number is three numbers separated by dots, like 1.2.43
+# followed by an optional build number separated by a +.
+# Both the version and the builder number may be overridden in flutter
+# build by specifying --build-name and --build-number, respectively.
+# In Android, build-name is used as versionName while build-number used as versionCode.
+# Read more about Android versioning at https://developer.android.com/studio/publish/versioning
+# In iOS, build-name is used as CFBundleShortVersionString while build-number is used as CFBundleVersion.
+# Read more about iOS versioning at
+# https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/CoreFoundationKeys.html
+# In Windows, build-name is used as the major, minor, and patch parts
+# of the product and file versions while build-number is used as the build suffix.
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.10.1
+
+# Dependencies specify other packages that your package needs in order to work.
+# To automatically upgrade your package dependencies to the latest versions
+# consider running `flutter pub upgrade --major-versions`. Alternatively,
+# dependencies can be manually updated by changing the version numbers below to
+# the latest version available on pub.dev. To see which dependencies have newer
+# versions available, run `flutter pub outdated`.
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations: #国际化
+    sdk: flutter
+  shared_preferences: 2.5.3
+  package_info_plus: ^8.3.1 #包信息
+  modal_bottom_sheet: 3.0.0 #ios 模式弹窗
+  flutter_screenutil: 5.9.3 #屏幕适配
+  cupertino_icons: 1.0.8
+  logger: 2.6.0 #输出
+  dio: 5.9.0
+  intl: ^0.20.2 #国际化
+  path_provider: 2.1.5 #路径管理
+  flutter_image_compress: 2.4.0 #图片压缩
+  path: ^1.8.0 #路径
+  image_picker: 1.2.0 #图片选择
+  wechat_assets_picker: 9.8.0 #图片选择
+  #----------------链接------------------------
+  url_launcher: 6.3.2 #跳转
+  event_bus: 2.0.1 #事件管理
+  get: 4.7.2 #状态管理
+  pull_to_refresh: 2.0.0 #下拉刷新
+  cached_network_image: 3.4.1 #图片缓存器
+  flutter_cache_manager: ^3.3.0 #缓存管理器
+  version: 3.0.2 #版本转换
+  permission_handler: 12.0.1
+  flutter_easyloading: 3.0.5
+  flutter_app_update: ^3.2.2
+  pin_code_fields: 8.0.1
+  skeletonizer: ^2.1.1
+  fluttertoast: ^8.2.12
+  flutter_native_splash: ^2.4.6
+  focus_detector_v2: ^3.1.0+1
+  freezed_annotation: ^3.1.0
+  freezed: ^3.2.3
+  linked_scroll_controller: ^0.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  #flutter pub run build_runner build --delete-conflicting-outputs
+  lint: ^2.8.0 #设计规范
+  build_runner:
+  # flutter pub run flutter_launcher_icons:main
+#flutter_icons:
+#  android: true
+#  ios: true
+#  image_path: "assets/image/应用图标.png"
+# flutter_icons:
+#   android: true
+#   ios: true
+#   image_path: "assets/app_icon.png"
+#   min_sdk_android: 21
+
+# flutter_native_splash:
+#   # Android 11及以下版本的配置
+#   background_image: "assets/app_splash_back.png"
+#   background_image_ios: "assets/app_splash_back.png"
+#   #  android_gravity: fill
+#   ##  ios_content_mode: center
+#   #
+#   # Android 12+版本的专门配置
+#   android_12:
+#     color: "#FFFFFF"
+#     image: "assets/app_splash_icon.png"
+#     icon_background_color: "#FFFFFF"
+
+
+
+flutter:
+  uses-material-design: true
+  generate: true
+
+  assets:
+    - assets/
+    - assets/images/
+
+flutter_intl:
+  enabled: true

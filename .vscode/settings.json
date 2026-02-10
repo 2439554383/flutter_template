@@ -1,0 +1,233 @@
+{
+  // 1. 设置字体系列：将 JetBrains Mono 置于首位
+  "editor.fontFamily": "'JetBrains Mono', Consolas, 'Courier New', monospace",
+  // 2. 设置字号：Android Studio 默认通常是 13 或 14，你可以根据图片里的习惯调整
+  "editor.fontSize": 13,
+  // 3. 启用字体连字 (Ligatures)：这是 AS 的灵魂，会让 =>、==、!= 变成漂亮的连体符号
+  "editor.fontLigatures": true,
+  // 4. 设置行高：Android Studio 的行间距通常比较宽，建议设为 1.4 到 1.5 倍
+  // 1.5 倍行高计算公式：字号 14 * 1.5 = 21
+  "editor.lineHeight": 21,
+  // 5. 字重 (Weight)：VS Code 渲染有时会偏细，AS 看起来更厚实一点
+  // 如果觉得太细，可以尝试 "450" 或 "500"
+  "editor.fontWeight": "400",
+  // 6. 字符间距：微调可以让视觉感更清爽
+  "editor.letterSpacing": 0.5,
+  // 1. 基础环境设置
+  "editor.semanticHighlighting.enabled": true,
+  "dart.selectionHighlightingEnabled": true,
+  // 【核心修复 A】彻底关闭 VS Code 的彩色括号功能，让它们变回黑色
+  "editor.bracketPairColorization.enabled": false,
+  "editor.guides.bracketPairs": false,
+  // 设置终端主题
+  "workbench.colorCustomizations": {
+    "debugConsole.warningForeground": "#f06a6a",
+    "debugConsole.errorForeground": "#eb5a5a",
+    "debugConsole.sourceForeground": "#000000",
+    "debugConsole.infoForeground": "#000000",
+    "debugView.valueChangedHighlight": "#000000",
+    "terminal.foreground": "#000000",
+    "terminal.background": "#ffffff",
+    // 已移除代码提示框和选中文本的自定义颜色，恢复默认
+    // "editorSuggestWidget.background": "#24262b",
+    // "editorSuggestWidget.selectedBackground": "#768fc4",
+    // "editorSuggestWidget.highlightForeground": "#ffffff",
+    // "editor.selectionBackground": "#000000",
+    // "editor.selectionForeground": "#ff0000",
+    "terminal.ansiBrightYellow": "#000000",
+    "terminal.ansiYellow": "#000000"
+  },
+  // 设置代码主题
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      // 【核心修复 B】强制所有标点符号、括号、运算符为黑色
+      {
+        "scope": [
+          "punctuation",
+          "punctuation.bracket.dart",
+          "punctuation.section.block.dart",
+          "punctuation.section.expression.dart",
+          "punctuation.section.arguments.dart",
+          "punctuation.terminator.dart",
+          "punctuation.separator.dart",
+          "punctuation.dot.dart",
+          "meta.brace.round.dart",
+          "meta.brace.square.dart",
+          "meta.brace.curly.dart",
+          "keyword.operator.dart",
+          "keyword.operator.assignment.dart"
+        ],
+        "settings": {
+          "foreground": "#000000",
+          "fontStyle": ""
+        }
+      },
+      // -------------------------------------------------
+      // 第一优先级：构造函数调用 (Constructor Calls) -> 淡蓝色
+      // -------------------------------------------------
+      {
+        "scope": [
+          "meta.function-call.dart support.class.dart",
+          "meta.function-call.dart entity.name.type.class.dart",
+          "new.expr.dart entity.name.type.dart",
+          "entity.name.constructor.dart",
+          "meta.invocation.dart support.class.dart"
+        ],
+        "settings": {
+          "foreground": "#2196F3",
+          "fontStyle": ""
+        }
+      },
+      // -------------------------------------------------
+      // 第二优先级：方法定义 (Method Declaration) -> 藏青色
+      // -------------------------------------------------
+      {
+        "scope": [
+          "entity.name.function.dart",
+          "meta.function.dart entity.name.function.dart"
+        ],
+        "settings": {
+          "foreground": "#00627A"
+        }
+      },
+      // -------------------------------------------------
+      // 第三优先级：普通的类名、类型名、方法调用 -> 黑色
+      // -------------------------------------------------
+      {
+        "scope": [
+          "support.class.dart",
+          "entity.name.type.class.dart",
+          "entity.name.type.dart",
+          "meta.function-call.dart",
+          "meta.method-call.dart",
+          "variable.language.this.dart"
+        ],
+        "settings": {
+          "foreground": "#000000"
+        }
+      },
+      // -------------------------------------------------
+      // 第四优先级：关键字和基础类型 -> 深蓝色
+      // -------------------------------------------------
+      {
+        "scope": [
+          "keyword.control.dart",
+          "keyword.other.dart",
+          "storage.type.dart",
+          "storage.modifier.dart",
+          "keyword.declaration.dart",
+          "support.class.dart.core",
+          "constant.language.dart"
+        ],
+        "settings": {
+          "foreground": "#0033B3",
+          "fontStyle": ""
+        }
+      },
+      // -------------------------------------------------
+      // 第五优先级：变量和属性 -> 紫色
+      // -------------------------------------------------
+      {
+        "scope": [
+          "variable.other.dart",
+          "variable.parameter.dart",
+          "variable.other.readwrite.dart",
+          "variable.other.property.dart",
+          "meta.definition.variable.name.dart"
+        ],
+        "settings": {
+          "foreground": "#871094"
+        }
+      },
+      // 命名参数 child: 黑色
+      {
+        "scope": "entity.other.attribute-name.dart",
+        "settings": {
+          "foreground": "#000000"
+        }
+      },
+      // 字符串绿色
+      {
+        "scope": [
+          "string.quoted.single.dart",
+          "string.quoted.double.dart"
+        ],
+        "settings": {
+          "foreground": "#067D17"
+        }
+      },
+      // 数字亮蓝
+      {
+        "scope": "constant.numeric.dart",
+        "settings": {
+          "foreground": "#1750EB"
+        }
+      },
+      // 注解黄色
+      {
+        "scope": "storage.type.annotation.dart",
+        "settings": {
+          "foreground": "#9E880D"
+        }
+      },
+      // 注释灰色
+      {
+        "scope": "comment",
+        "settings": {
+          "foreground": "#8C8C8C",
+          "fontStyle": "italic"
+        }
+      }
+    ]
+  },
+  // 设置代码主题
+  // 3. 语义高亮规则
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      // 【核心修复 C】确保语义层标点符号不乱着色
+      "operator": {
+        "foreground": "#000000"
+      },
+      "punctuation": {
+        "foreground": "#000000"
+      },
+      "class": {
+        "foreground": "#000000"
+      },
+      "class.declaration": {
+        "foreground": "#000000"
+      },
+      "class.constructor": {
+        "foreground": "#2196F3"
+      },
+      "type": {
+        "foreground": "#000000"
+      },
+      "method": {
+        "foreground": "#000000"
+      },
+      "function": {
+        "foreground": "#000000"
+      },
+      "method.declaration": {
+        "foreground": "#00627A"
+      },
+      "function.declaration": {
+        "foreground": "#00627A"
+      },
+      "variable": {
+        "foreground": "#871094"
+      },
+      "property": {
+        "foreground": "#871094"
+      },
+      "parameter": {
+        "foreground": "#000000"
+      },
+      "keyword": {
+        "foreground": "#0033B3"
+      }
+    }
+  }
+}
