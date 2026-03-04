@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_template/generated/l10n.dart';
 import 'package:flutter_template/page/tab/home/home_page.dart';
-import 'package:flutter_template/page/tab/video/video_page.dart';
 import 'package:get/get.dart';
 
 class TabCtrl extends GetxController{
@@ -13,7 +12,7 @@ class TabCtrl extends GetxController{
     BottomNavigationBarItem(icon: Icon(Icons.person),label: S.current.person),
   ];
 
-  List<Widget> bodyList = [HomePage(), VideoPage(), HomePage(), HomePage()];
+  List<Widget> bodyList = [HomePage(), HomePage(), HomePage(), HomePage()];
   RxInt currentIndex = 0.obs;
   @override
   void onInit() {

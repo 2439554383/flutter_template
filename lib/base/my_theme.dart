@@ -13,9 +13,9 @@ final ThemeData darkTheme = ThemeData(
 );
 
 final BottomAppBarTheme = BottomNavigationBarThemeData(
-    selectedItemColor: mainColor,
-    backgroundColor: whiteColor,
-    unselectedItemColor: greyTextColor,
+    selectedItemColor: MyColor.main,
+    backgroundColor: MyColor.white,
+    unselectedItemColor: MyColor.greyText,
     showUnselectedLabels: true,
-    unselectedLabelStyle: MyText.w4_12.copyWith(color: greyTextColor)
+    unselectedLabelStyle: MyText.w4_12.copyWith(color: MyColor.greyText)
   );
