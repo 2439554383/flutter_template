@@ -6,8 +6,11 @@ import 'package:flutter_template/generated/l10n.dart';
 import 'package:flutter_template/route/my_pages.dart';
 import 'package:flutter_template/route/my_route.dart';
 import 'package:get/get.dart';
+import 'package:rive/rive.dart';
 
-void main() {
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await RiveNative.init();
   runApp(const MyApp());
 }
 

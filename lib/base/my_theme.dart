@@ -4,12 +4,14 @@ import 'package:flutter_template/base/my_text.dart';
 final ThemeData lightTheme = ThemeData(
   primaryColor: Colors.purple,
   fontFamily: 'Georgia',
-  bottomNavigationBarTheme: BottomAppBarTheme
+  bottomNavigationBarTheme: BottomAppBarTheme,
+  scaffoldBackgroundColor: blackColor,
 );
 final ThemeData darkTheme = ThemeData(
   primaryColor: Colors.purple,
   fontFamily: 'Georgia',
-  bottomNavigationBarTheme: BottomAppBarTheme
+  bottomNavigationBarTheme: BottomAppBarTheme,
+  scaffoldBackgroundColor: blackColor,
 );
 
 final BottomAppBarTheme = BottomNavigationBarThemeData(

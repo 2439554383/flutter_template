@@ -64,6 +64,7 @@ dependencies:
   freezed_annotation: ^3.1.0
   freezed: ^3.2.3
   linked_scroll_controller: ^0.2.0
+  rive: ^0.14.4
 
 dev_dependencies:
   flutter_test:
@@ -105,6 +106,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/rive/keyboard.riv
 
 flutter_intl:
   enabled: true
