@@ -4,6 +4,10 @@ import 'package:get/get_navigation/src/extension_navigation.dart';
 
 abstract class MyRoutes {
   static const tab = '/tab';
+  static const test = '/test';
+  static const saveScrolllistStatus = '/save_scrolllist_status';
+  static const autoFill = '/auto_fill';
+  static const neonButton = '/neon_button';
 
   static push(
     String name, {
