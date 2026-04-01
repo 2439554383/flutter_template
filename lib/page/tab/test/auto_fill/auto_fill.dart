@@ -12,6 +12,7 @@ class _AutoFillState extends State<AutoFill> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        appBar: AppBar(title: Text("自动填充"),),
           body: AutofillGroup(child: Column(
           children: [
             TextField(

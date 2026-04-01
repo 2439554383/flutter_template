@@ -4,6 +4,10 @@ import 'package:get/get_state_manager/src/simple/get_controllers.dart';
 
 class TestCtrl extends GetxController{
   List<TestModel> itemList = [
+   TestModel(
+      title: "Animated AppBar",
+      method: () => MyRoutes.push(MyRoutes.anamatedAppBar),
+    ),
     TestModel(
       title: "保存列表滚动状态",
       method: () => MyRoutes.push(MyRoutes.saveScrolllistStatus),

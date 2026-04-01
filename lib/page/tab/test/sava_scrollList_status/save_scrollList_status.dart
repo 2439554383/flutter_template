@@ -24,6 +24,7 @@ class _SaveScrolllistStatusState extends State<SaveScrolllistStatus> with Ticker
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(title: Text("保存列表滚动状态"),),
       body: Column(
         children: [
           SafeArea(child: TabBar(tabs: [Tab(text: "Tab 1"), Tab(text: "Tab 2")],controller: tabController,)),

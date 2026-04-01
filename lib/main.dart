@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_template/base/my_theme.dart';
 import 'package:flutter_template/generated/l10n.dart';
@@ -10,6 +11,7 @@ import 'package:rive/rive.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.remove();
   await RiveNative.init();
   runApp(const MyApp());
 }
@@ -29,7 +31,7 @@ class MyApp extends StatelessWidget {
       builder: (context, child) {
         return GetMaterialApp(
           title: 'Flutter Demo',
-          theme: lightTheme,
+          theme: darkTheme,
           initialRoute: MyRoutes.tab,
           getPages: MyPages.pages,
           locale: const Locale("zh"),

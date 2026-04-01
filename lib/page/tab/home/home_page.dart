@@ -46,37 +46,13 @@ class _InteractiveKeyboardRiveState extends State<_InteractiveKeyboardRive> {
   );
 
   RiveWidgetController? _controller;
-  TriggerInput? _tapTrigger;
-  BooleanInput? _toggleBool;
-  NumberInput? _dragNumber;
   
   void _bindInputs(RiveWidgetController controller) {
     _controller = controller;
-    for (final input in controller.stateMachine.inputs) {
-      if (_tapTrigger == null && input is TriggerInput) _tapTrigger = input;
-      if (_toggleBool == null && input is BooleanInput) _toggleBool = input;
-      if (_dragNumber == null && input is NumberInput) _dragNumber = input;
-    }
   }
 
   void _handleTap() {
-    if (_tapTrigger != null) {
-      _tapTrigger!.fire();
-      _controller?.scheduleRepaint();
-      return;
-    }
-    if (_toggleBool != null) {
-      _toggleBool!.value = !_toggleBool!.value;
-      _controller?.scheduleRepaint();
-    }
-  }
-
-  void _handlePanUpdate(DragUpdateDetails details) {
-    if (_dragNumber == null) return;
-
-    final next = (_dragNumber!.value + details.delta.dx / 200.0).clamp(0.0, 1.0);
-    _dragNumber!.value = next;
-    _controller?.scheduleRepaint();
+      // _controller?.scheduleRepaint();
   }
 
   @override
@@ -108,7 +84,6 @@ class _InteractiveKeyboardRiveState extends State<_InteractiveKeyboardRive> {
               return GestureDetector(
                 behavior: HitTestBehavior.opaque,
                 onTap: _handleTap,
-                onPanUpdate: _handlePanUpdate,
                 child: RiveWidget(
                   controller: loaded.controller,
                   fit: Fit.fitWidth,

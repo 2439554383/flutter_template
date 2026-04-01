@@ -1,10 +1,12 @@
 import 'package:flutter_template/page/tab/home/home_ctrl.dart';
+import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar.dart';
+import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar_ctrl.dart';
 import 'package:flutter_template/page/tab/video/video_ctrl.dart';
-import 'package:flutter_template/page/tab/home/test/auto_fill/auto_fill.dart';
-import 'package:flutter_template/page/tab/home/test/neon_button/neon_button_page.dart';
-import 'package:flutter_template/page/tab/home/test/sava_scrollList_status/save_scrollList_status.dart';
-import 'package:flutter_template/page/tab/home/test/test_ctrl.dart';
-import 'package:flutter_template/page/tab/home/test/test_page.dart';
+import 'package:flutter_template/page/tab/test/auto_fill/auto_fill.dart';
+import 'package:flutter_template/page/tab/test/neon_button/neon_button_page.dart';
+import 'package:flutter_template/page/tab/test/sava_scrollList_status/save_scrollList_status.dart';
+import 'package:flutter_template/page/tab/test/test_ctrl.dart';
+import 'package:flutter_template/page/tab/test/test_page.dart';
 import 'package:get/get.dart';
 import 'package:flutter_template/page/tab/tab_page.dart';
 import 'package:flutter_template/page/tab/tab_ctrl.dart';
@@ -39,6 +41,13 @@ class MyPages {
     GetPage(
       name: MyRoutes.neonButton,
       page: () => const NeonButtonPage(),
+    ),
+    GetPage(
+      name: MyRoutes.anamatedAppBar,
+      page: () => const AnamatedAppBar(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<AnamatedAppBarCtrl>(() => AnamatedAppBarCtrl());
+      }),
     ),
   ];
 }
