@@ -20,6 +20,10 @@ class TestCtrl extends GetxController{
       title: "霓虹按钮",
       method: () => MyRoutes.push(MyRoutes.neonButton),
     ),
+    TestModel(
+      title: "用isolates加载电影",
+      method: () => MyRoutes.push(MyRoutes.loadWithIsolates),
+    ),
   ];
   @override
   void onInit() {

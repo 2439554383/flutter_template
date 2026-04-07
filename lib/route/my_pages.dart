@@ -1,6 +1,7 @@
 import 'package:flutter_template/page/tab/home/home_ctrl.dart';
 import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar.dart';
 import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar_ctrl.dart';
+import 'package:flutter_template/page/tab/test/load_with_isolates/load_with_isolates.dart';
 import 'package:flutter_template/page/tab/video/video_ctrl.dart';
 import 'package:flutter_template/page/tab/test/auto_fill/auto_fill.dart';
 import 'package:flutter_template/page/tab/test/neon_button/neon_button_page.dart';
@@ -41,6 +42,10 @@ class MyPages {
     GetPage(
       name: MyRoutes.neonButton,
       page: () => const NeonButtonPage(),
+    ),
+        GetPage(
+      name: MyRoutes.loadWithIsolates,
+      page: () => const LoadWithIsolates(),
     ),
     GetPage(
       name: MyRoutes.anamatedAppBar,

@@ -72,7 +72,8 @@ dev_dependencies:
 
   #flutter pub run build_runner build --delete-conflicting-outputs
   lint: ^2.8.0 #设计规范
-  build_runner:
+  build_runner: ^2.5.4
+  json_serializable: ^6.11.1
   # flutter pub run flutter_launcher_icons:main
 #flutter_icons:
 #  android: true
@@ -106,6 +107,7 @@ flutter:
   assets:
     - assets/
     - assets/images/
+    - assets/json/
     - assets/rive/keyboard.riv
 
 flutter_intl:

@@ -9,7 +9,7 @@ abstract class MyRoutes {
   static const autoFill = '/auto_fill';
   static const neonButton = '/neon_button';
   static const anamatedAppBar = '/anamated_appbar';
-  
+  static const loadWithIsolates = '/load_with_isolates';
   static push(
     String name, {
     arguments,
