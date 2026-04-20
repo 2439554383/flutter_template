@@ -10,6 +10,8 @@ abstract class MyRoutes {
   static const neonButton = '/neon_button';
   static const anamatedAppBar = '/anamated_appbar';
   static const loadWithIsolates = '/load_with_isolates';
+  static const circularMenu = '/circular_menu';
+  
   static push(
     String name, {
     arguments,

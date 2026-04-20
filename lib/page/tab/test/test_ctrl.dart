@@ -24,6 +24,10 @@ class TestCtrl extends GetxController{
       title: "用isolates加载电影",
       method: () => MyRoutes.push(MyRoutes.loadWithIsolates),
     ),
+        TestModel(
+      title: "自定义圆形菜单",
+      method: () => MyRoutes.push(MyRoutes.circularMenu),
+    ),
   ];
   @override
   void onInit() {

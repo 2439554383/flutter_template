@@ -1,6 +1,8 @@
 import 'package:flutter_template/page/tab/home/home_ctrl.dart';
 import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar.dart';
 import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar_ctrl.dart';
+import 'package:flutter_template/page/tab/test/circular_menu/circular_menu.dart';
+import 'package:flutter_template/page/tab/test/circular_menu/circular_menu_ctrl.dart';
 import 'package:flutter_template/page/tab/test/load_with_isolates/load_with_isolates.dart';
 import 'package:flutter_template/page/tab/video/video_ctrl.dart';
 import 'package:flutter_template/page/tab/test/auto_fill/auto_fill.dart';
@@ -52,6 +54,13 @@ class MyPages {
       page: () => const AnamatedAppBar(),
       binding: BindingsBuilder(() {
         Get.lazyPut<AnamatedAppBarCtrl>(() => AnamatedAppBarCtrl());
+      }),
+    ),
+        GetPage(
+      name: MyRoutes.circularMenu,
+      page: () => const CircularMenu(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<CircularMenuCtrl>(() => CircularMenuCtrl());
       }),
     ),
   ];
