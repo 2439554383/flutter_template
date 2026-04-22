@@ -11,7 +11,9 @@ abstract class MyRoutes {
   static const anamatedAppBar = '/anamated_appbar';
   static const loadWithIsolates = '/load_with_isolates';
   static const circularMenu = '/circular_menu';
-  
+    static const cacheCustomFolders = '/cacheCustomFolders';
+  static const customMask = '/custom_mask';
+  static const animatedDraggableCard = '/animated_draggable_card';
   static push(
     String name, {
     arguments,

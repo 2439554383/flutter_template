@@ -1,8 +1,14 @@
 import 'package:flutter_template/page/tab/home/home_ctrl.dart';
 import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar.dart';
 import 'package:flutter_template/page/tab/test/anamated_appbar/anamated_appbar_ctrl.dart';
+import 'package:flutter_template/page/tab/test/cacheCustomFolders/cacheCustomFolders.dart';
+import 'package:flutter_template/page/tab/test/cacheCustomFolders/cacheCustomFoldersCtrl.dart';
 import 'package:flutter_template/page/tab/test/circular_menu/circular_menu.dart';
 import 'package:flutter_template/page/tab/test/circular_menu/circular_menu_ctrl.dart';
+import 'package:flutter_template/page/tab/test/animated_draggable_card/animated_draggable_card.dart';
+import 'package:flutter_template/page/tab/test/animated_draggable_card/animated_draggable_card_ctrl.dart';
+import 'package:flutter_template/page/tab/test/custom_mask/custom_mask.dart';
+import 'package:flutter_template/page/tab/test/custom_mask/custom_mask_ctrl.dart';
 import 'package:flutter_template/page/tab/test/load_with_isolates/load_with_isolates.dart';
 import 'package:flutter_template/page/tab/video/video_ctrl.dart';
 import 'package:flutter_template/page/tab/test/auto_fill/auto_fill.dart';
@@ -61,6 +67,27 @@ class MyPages {
       page: () => const CircularMenu(),
       binding: BindingsBuilder(() {
         Get.lazyPut<CircularMenuCtrl>(() => CircularMenuCtrl());
+      }),
+    ),
+            GetPage(
+      name: MyRoutes.cacheCustomFolders,
+      page: () => const Cachecustomfolders(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<Cachecustomfoldersctrl>(() => Cachecustomfoldersctrl());
+      }),
+    ),
+    GetPage(
+      name: MyRoutes.customMask,
+      page: () => const CustomMaskPage(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<CustomMaskCtrl>(() => CustomMaskCtrl());
+      }),
+    ),
+    GetPage(
+      name: MyRoutes.animatedDraggableCard,
+      page: () => const AnimatedDraggableCardPage(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<AnimatedDraggableCardCtrl>(() => AnimatedDraggableCardCtrl());
       }),
     ),
   ];

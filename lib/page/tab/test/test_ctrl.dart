@@ -28,6 +28,18 @@ class TestCtrl extends GetxController{
       title: "自定义圆形菜单",
       method: () => MyRoutes.push(MyRoutes.circularMenu),
     ),
+            TestModel(
+      title: "加载文件",
+      method: () => MyRoutes.push(MyRoutes.cacheCustomFolders),
+    ),
+    TestModel(
+      title: "自定义遮罩/遮蔽",
+      method: () => MyRoutes.push(MyRoutes.customMask),
+    ),
+    TestModel(
+      title: "动画拖动卡片",
+      method: () => MyRoutes.push(MyRoutes.animatedDraggableCard),
+    ),
   ];
   @override
   void onInit() {

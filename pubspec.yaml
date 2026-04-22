@@ -65,6 +65,12 @@ dependencies:
   freezed: ^3.2.3
   linked_scroll_controller: ^0.2.0
   rive: ^0.14.4
+  file_picker: ^11.0.2
+  open_file: ^3.5.11
+  widget_mask: ^1.0.0+0
+  flutter_gen: ^5.14.0
+  build_runner: ^2.13.1
+  flutter_gen_runner: ^5.14.0
 
 dev_dependencies:
   flutter_test:
@@ -72,7 +78,6 @@ dev_dependencies:
 
   #flutter pub run build_runner build --delete-conflicting-outputs
   lint: ^2.8.0 #设计规范
-  build_runner: ^2.5.4
   json_serializable: ^6.11.1
   # flutter pub run flutter_launcher_icons:main
 #flutter_icons:
