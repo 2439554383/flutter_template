@@ -73,6 +73,26 @@ class S {
   String get person {
     return Intl.message('Mine', name: 'person', desc: '', args: []);
   }
+
+  /// `Multi-function table`
+  String get multiFunctionTable {
+    return Intl.message(
+      'Multi-function table',
+      name: 'multiFunctionTable',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Multi-function table page (TODO)`
+  String get multiFunctionTableBody {
+    return Intl.message(
+      'Multi-function table page (TODO)',
+      name: 'multiFunctionTableBody',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

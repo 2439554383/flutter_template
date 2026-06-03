@@ -2,5 +2,7 @@
     "home": "首页",
     "video": "视频",
     "service": "服务",
-    "person": "我的"
+    "person": "我的",
+    "multiFunctionTable": "多功能表格",
+    "multiFunctionTableBody": "多功能表格页面（待完善）"
 }

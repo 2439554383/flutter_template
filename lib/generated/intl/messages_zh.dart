@@ -23,6 +23,10 @@ class MessageLookup extends MessageLookupByLibrary {
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
     "home": MessageLookupByLibrary.simpleMessage("首页"),
+    "multiFunctionTable":
+        MessageLookupByLibrary.simpleMessage("多功能表格"),
+    "multiFunctionTableBody":
+        MessageLookupByLibrary.simpleMessage("多功能表格页面（待完善）"),
     "person": MessageLookupByLibrary.simpleMessage("我的"),
     "service": MessageLookupByLibrary.simpleMessage("服务"),
     "video": MessageLookupByLibrary.simpleMessage("视频"),

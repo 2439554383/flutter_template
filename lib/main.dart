@@ -7,6 +7,7 @@ import 'package:flutter_template/generated/l10n.dart';
 import 'package:flutter_template/route/my_pages.dart';
 import 'package:flutter_template/route/my_route.dart';
 import 'package:get/get.dart';
+import 'package:overlay_support/overlay_support.dart';
 import 'package:rive/rive.dart';
 
 Future<void> main() async {
@@ -29,19 +30,21 @@ class MyApp extends StatelessWidget {
       useInheritedMediaQuery: true,
       splitScreenMode: true,
       builder: (context, child) {
-        return GetMaterialApp(
-          title: 'Flutter Demo',
-          theme: darkTheme,
-          initialRoute: MyRoutes.tab,
-          getPages: MyPages.pages,
-          locale: const Locale("zh"),
-          localizationsDelegates: const [
-            S.delegate, 
-            GlobalMaterialLocalizations.delegate,
-            GlobalWidgetsLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-          ],
-          supportedLocales: S.delegate.supportedLocales,
+        return OverlaySupport.global(
+          child: GetMaterialApp(
+            title: 'Flutter Demo',
+            theme: darkTheme,
+            initialRoute: MyRoutes.tab,
+            getPages: MyPages.pages,
+            locale: const Locale("zh"),
+            localizationsDelegates: const [
+              S.delegate, 
+              GlobalMaterialLocalizations.delegate,
+              GlobalWidgetsLocalizations.delegate,
+              GlobalCupertinoLocalizations.delegate,
+            ],
+            supportedLocales: S.delegate.supportedLocales,
+          ),
         );
       },
     );

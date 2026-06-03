@@ -71,6 +71,9 @@ dependencies:
   flutter_gen: ^5.14.0
   build_runner: ^2.13.1
   flutter_gen_runner: ^5.14.0
+  internet_connection_checker_plus: ^2.9.1+2
+  overlay_support: ^2.1.0
+  font_awesome_flutter: ^11.0.0
 
 dev_dependencies:
   flutter_test:

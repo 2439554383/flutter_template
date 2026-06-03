@@ -1,6 +1,10 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_template/model/test_model.dart';
 import 'package:flutter_template/route/my_route.dart';
 import 'package:get/get_state_manager/src/simple/get_controllers.dart';
+import 'package:internet_connection_checker_plus/internet_connection_checker_plus.dart';
+import 'package:overlay_support/overlay_support.dart';
 
 class TestCtrl extends GetxController{
   List<TestModel> itemList = [
@@ -40,10 +44,18 @@ class TestCtrl extends GetxController{
       title: "动画拖动卡片",
       method: () => MyRoutes.push(MyRoutes.animatedDraggableCard),
     ),
+    TestModel(
+      title: "捏合缩放图片",
+      method: () => MyRoutes.push(MyRoutes.pinchZoomImage),
+    ),
+    TestModel(
+      title: "多功能表格",
+      method: () => MyRoutes.push(MyRoutes.multiFunctionTable),
+    ),
   ];
   @override
   void onInit() {
-    // TODO: implement onInit
+
     super.onInit();
   }
   @override
@@ -56,4 +68,6 @@ class TestCtrl extends GetxController{
     // TODO: implement onReady
     super.onReady();
   }
+
+
 }

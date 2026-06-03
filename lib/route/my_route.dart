@@ -14,6 +14,8 @@ abstract class MyRoutes {
     static const cacheCustomFolders = '/cacheCustomFolders';
   static const customMask = '/custom_mask';
   static const animatedDraggableCard = '/animated_draggable_card';
+  static const pinchZoomImage = '/pinch_zoom_image';
+  static const multiFunctionTable = '/multi_function_table';
   static push(
     String name, {
     arguments,

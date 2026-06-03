@@ -9,6 +9,10 @@ import 'package:flutter_template/page/tab/test/animated_draggable_card/animated_
 import 'package:flutter_template/page/tab/test/animated_draggable_card/animated_draggable_card_ctrl.dart';
 import 'package:flutter_template/page/tab/test/custom_mask/custom_mask.dart';
 import 'package:flutter_template/page/tab/test/custom_mask/custom_mask_ctrl.dart';
+import 'package:flutter_template/page/tab/test/pinch_zoom_image/pinch_zoom_image.dart';
+import 'package:flutter_template/page/tab/test/pinch_zoom_image/pinch_zoom_image_ctrl.dart';
+import 'package:flutter_template/page/tab/test/multi_function_table/multi_function_table_page.dart';
+import 'package:flutter_template/page/tab/test/multi_function_table/multi_function_table_ctrl.dart';
 import 'package:flutter_template/page/tab/test/load_with_isolates/load_with_isolates.dart';
 import 'package:flutter_template/page/tab/video/video_ctrl.dart';
 import 'package:flutter_template/page/tab/test/auto_fill/auto_fill.dart';
@@ -88,6 +92,20 @@ class MyPages {
       page: () => const AnimatedDraggableCardPage(),
       binding: BindingsBuilder(() {
         Get.lazyPut<AnimatedDraggableCardCtrl>(() => AnimatedDraggableCardCtrl());
+      }),
+    ),
+    GetPage(
+      name: MyRoutes.pinchZoomImage,
+      page: () =>  PinchZoomImagePage(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<PinchZoomImageCtrl>(() => PinchZoomImageCtrl());
+      }),
+    ),
+    GetPage(
+      name: MyRoutes.multiFunctionTable,
+      page: () => MultiFunctionTablePage(),
+      binding: BindingsBuilder(() {
+        Get.lazyPut<MultiFunctionTableCtrl>(() => MultiFunctionTableCtrl());
       }),
     ),
   ];

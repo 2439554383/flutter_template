@@ -2,5 +2,7 @@
     "home": "Home",
     "video": "Video",
     "service": "Service",
-    "person": "Mine"
+    "person": "Mine",
+    "multiFunctionTable": "Multi-function table",
+    "multiFunctionTableBody": "Multi-function table page (TODO)"
 }
