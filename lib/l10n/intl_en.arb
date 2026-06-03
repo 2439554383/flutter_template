@@ -2,5 +2,8 @@
     "home": "Home",
     "video": "Video",
     "service": "Service",
-    "person": "Mine"
+    "person": "Mine",
+    "loadFailed": "Failed to load",
+    "noData": "No data",
+    "retry": "Retry"
 }

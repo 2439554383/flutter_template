@@ -73,6 +73,26 @@ class S {
   String get person {
     return Intl.message('Mine', name: 'person', desc: '', args: []);
   }
+
+  /// `Failed to load`
+  String get loadFailed {
+    return Intl.message(
+      'Failed to load',
+      name: 'loadFailed',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No data`
+  String get noData {
+    return Intl.message('No data', name: 'noData', desc: '', args: []);
+  }
+
+  /// `Retry`
+  String get retry {
+    return Intl.message('Retry', name: 'retry', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {
